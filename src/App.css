@@ -1,38 +1,105 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  margin-top: 1vh;
+  width: 600px;
+  height: 700px;
+  border: 2px solid black;
+}
+
+.box-header, .box-footer {
+  padding: 2vh 2vw;
+}
+
+.point, .time {
+  width: 60%;
+  margin-top: 1vh;
+  display: flex;
+  align-items: center;
+}
+
+.point-label, .time-title {
+  width: 15%;
+}
+.point-input, .time-count {
+  margin-left: 7vw;
+}
+
+.button-play {
+  width: 130px; 
+  border: 2px solid #6c757d; 
+  background-color: #EFEFEF;
+  font-weight: 500; 
+  border-radius: 5px; 
+  padding: 0;
+}
+
+.button-play:hover {
+  background-color: #E5E5E5;
+}
+
+.button-restart, .button-auto {
+  width: 130px; 
+  border: 2px solid #6c757d; 
+  background-color: #EFEFEF;
+  font-weight: 500; 
+  border-radius: 5px; 
+  padding: 0;
+}
+
+.button-restart:hover, .button-auto:hover {
+  background-color: #E5E5E5;
+}
+
+
+.box-body {
+  margin-top: 1vh;
+  width: 100%;
+  height: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.zone {
+  position: relative;
+  width: 536px;
+  height: 100%;
+  border: 2px solid black;
+}
+
+.point-round {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid brown;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: white;
+  cursor: default;
 }
 
-.App-link {
-  color: #61dafb;
+.checked {
+  background-color: #D14B1E;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.checked-point {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
+.checked-time {
+  font-size: small;
+  color: #fff;
+  background-color: transparent;
+}
+
+/* Dùng keyFrame and animation để thay đổi tình trạng của point */
